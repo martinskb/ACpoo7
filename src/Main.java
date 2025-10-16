@@ -1,15 +1,20 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Pedido p = new Pedido();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        p.item1.produto = "Teclado";
+        p.item1.quantidade = 2;
+        p.item1.preco = 120.0;
+
+        p.item2.produto = "Mouse";
+        p.item2.quantidade = 1;
+        p.item2.preco = 80.0;
+
+        double total = (p.item1.quantidade * p.item1.preco) +
+                (p.item2.quantidade * p.item2.preco);
+
+        System.out.println("Produto 1: " + p.item1.produto);
+        System.out.println("Produto 2: " + p.item2.produto);
+        System.out.println("Valor total: " + total);
     }
 }
